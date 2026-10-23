@@ -12,9 +12,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&amp;family=Work+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
   <style>
     :root { --night:#090809; --stage:#151116; --ivory:#f5eee3; --amber:#ffd600; --hot:#ff005f; --muted:#c9beb9; }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; scroll-padding-top:82px; }
-    body { margin:0; width:100%; overflow-x:hidden; color:var(--ivory); background:var(--night); font-family:'Work Sans',sans-serif; }
+    * { box-sizing:border-box; min-width:0; }
+    html { width:100%; max-width:100%; overflow-x:hidden; scroll-behavior:smooth; scroll-padding-top:82px; }
+    body { margin:0; width:100%; max-width:100%; overflow-x:hidden; color:var(--ivory); background:var(--night); font-family:'Work Sans',sans-serif; }
+    img,video,iframe { display:block; max-width:100%; }
+    button,a { max-width:100%; }
+    main,header,footer,section { width:100%; max-width:100%; }
     body::after { content:""; position:fixed; inset:0; pointer-events:none; z-index:80; opacity:.09; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.83' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.3'/%3E%3C/svg%3E"); }
     [hidden] { display:none!important; }
     a,button { -webkit-tap-highlight-color:transparent; }
@@ -25,7 +28,7 @@
     .eyebrow { font-size:.7rem; font-weight:700; letter-spacing:.23em; text-transform:uppercase; }
     .section-heading { font-size:clamp(3.2rem,8.5vw,8.8rem); overflow-wrap:anywhere; }
     .body-copy { line-height:1.75; }
-    .site-header { position:fixed; inset:0 0 auto; z-index:45; background:rgba(9,8,9,.78); border-bottom:1px solid rgba(245,238,227,.16); backdrop-filter:blur(18px); }
+    .site-header { position:fixed; inset:0 0 auto; z-index:45; width:100%; max-width:100%; background:rgba(9,8,9,.78); border-bottom:1px solid rgba(245,238,227,.16); backdrop-filter:blur(18px); }
     .nav-link { color:var(--ivory); font-size:.72rem; font-weight:700; letter-spacing:.13em; text-transform:uppercase; transition:color .25s; }
     .nav-link:hover { color:var(--amber); }
     .logo-frame { display:grid; place-items:center; width:46px; height:46px; border:1px solid rgba(255,255,255,.32); border-radius:50%; flex:none; position:relative; } .logo-frame.logo-fallback::after { content:"La ULTIMA TRIBU"; position:absolute; inset:0; display:grid; place-items:center; padding:.2rem; color:var(--ivory); font-size:.42rem; font-weight:800; line-height:1; text-align:center; }
@@ -37,8 +40,8 @@
     .hero video { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:-3; }
     .hero-atmosphere { position:absolute; inset:0; z-index:-2; background:linear-gradient(90deg,rgba(9,8,9,.85) 0%,rgba(9,8,9,.28) 72%),linear-gradient(0deg,#090809 0%,transparent 58%),radial-gradient(ellipse at 76% 28%,rgba(255,122,0,.33),transparent 48%); }
     .hero::after { content:""; position:absolute; right:-15%; top:0; width:45%; height:100%; z-index:-1; transform:skewX(-16deg); background:linear-gradient(90deg,transparent,rgba(255,214,0,.07),transparent); pointer-events:none; }
-    .hero-inner { padding-top:11rem; padding-bottom:5rem; }
-    .hero-title { font-size:clamp(4.4rem,15vw,13rem); max-width:1050px; text-shadow:0 8px 55px rgba(0,0,0,.3); }
+    .hero-inner { width:100%; max-width:100%; padding-top:clamp(8rem,23vw,11rem); padding-bottom:clamp(3rem,9vw,5rem); }
+    .hero-title { max-width:100%; font-size:clamp(3.45rem,15vw,13rem); overflow-wrap:anywhere; text-shadow:0 8px 55px rgba(0,0,0,.3); }
     .hero-title .title-last { display:block; margin-left:clamp(1rem,8vw,9rem); color:var(--ivory); }
     .hero-bottom { display:grid; gap:2rem; align-items:end; margin-top:2rem; }
     .hero-actions { display:flex; flex-wrap:wrap; gap:.75rem; }
@@ -101,6 +104,32 @@
     .reveal:nth-child(2) { animation-delay:.1s; }
     .reveal:nth-child(3) { animation-delay:.2s; }
     @keyframes rise { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:translateY(0); } }
+    @media (max-width:639px) {
+      .shell { padding-inline:clamp:1rem,5vw,1.5rem); }
+      .site-header .shell { height:64px; padding-inline:1rem; }
+      .logo-frame { width:40px; height:40px; }
+      .nav-link { font-size:.68rem; }
+      .mobile-menu { max-height:calc(100 * min(var(--vh, 1vh), 1vh) - 64px); overflow-y:auto; }
+      .hero { min-height:calc(100 * min(var(--vh, 1vh), 1vh)); }
+      .hero-title { letter-spacing:-.065em; }
+      .hero-title .title-last { margin-left:clamp(.25rem,4vw,1rem); }
+      .hero-bottom { gap:1.25rem; }
+      .hero-actions { width:100%; }
+      .action { min-height:44px; padding:.72rem 1rem; }
+      .band-grid,.contact-layout { grid-template-columns:minmax(0,1fr); gap:3rem; }
+      .member:nth-child(even),.member:nth-child(3n) { margin-top:0; }
+      .member-media { width:100%; max-width:100%; margin-right:0; }
+      .member-content { margin:-2.5rem 0 0 7%; padding:1.25rem 1rem 0; }
+      .video-grid { grid-template-columns:minmax(0,1fr); gap:1rem; }
+      .video-row,.video-content { width:100%; min-width:0; align-items:stretch; flex-direction:column; }
+      .video-actions { width:100%; justify-content:flex-start; }
+      .video-actions .action { flex:1 1 auto; min-height:44px; }
+      .video-frame { width:100%; max-width:100%; aspect-ratio:16/9; }
+      .gallery-grid { grid-template-columns:minmax(0,1fr); gap:1rem; }
+      .gallery-trigger,.gallery-trigger:nth-child(5n+1) { grid-column:span 1; }
+      .gallery-image,.gallery-trigger:nth-child(5n+1) .gallery-image { width:100%; max-width:100%; aspect-ratio:4/3; min-height:0; object-fit:cover; }
+      .social-link { min-height:64px; font-size:clamp(1.35rem,7vw,2rem); }
+    }
     @media (min-width:640px) {
       .hero-bottom { grid-template-columns:minmax(0,560px) 1fr; }
       .band-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:5rem 2rem; }
@@ -134,19 +163,17 @@
  </head>
  <body data-template-id="__page-root" class="w-full" style="background: rgb(9, 8, 9);">
   <header data-template-id="site-header" class="canva-header site-header" style="background: rgba(9, 8, 9, 0.78);">
-   <nav class="shell h-[76px] flex items-center justify-between gap-5" aria-label="Navegación principal">
-    <a href="#inicio" class="flex items-center gap-3 min-w-0" aria-label="La ULTIMA TRIBU, ir al inicio"> <span class="logo-frame"><img data-template-id="brand-logo" class="canva-image w-9 h-9 object-contain" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('logo-fallback')" src="https://i.imgur.com/FtkZkMA.jpg" alt="Logo de La ULTIMA TRIBU"></span> <span data-template-id="nav-brand" class="canva-text display whitespace-nowrap text-[.85rem] sm:text-base" style="color: rgb(245, 238, 227); font-weight: 900; font-style: normal; font-size: 16px;">LA ULTIMA TRIBU</span> </a>
-    <div class="hidden md:flex items-center gap-7">
-     <a class="nav-link" href="#inicio">Inicio</a><a class="nav-link" href="#banda">La banda</a><a class="nav-link" href="#musica">Música</a><a class="nav-link" href="#galeria">Galería</a><a class="nav-link" href="#contacto">Contacto</a>
+   <nav class="shell h-[76px] flex items-center justify-between gap-5" aria-label="Navegación principal"><a href="#inicio" class="flex items-center gap-3 min-w-0" aria-label="La ULTIMA TRIBU, ir al inicio"> <span class="logo-frame"><img data-template-id="brand-logo" class="canva-image w-9 h-9 object-contain" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('logo-fallback')" src="https://i.imgur.com/FtkZkMA.jpg" alt="Logo de La ULTIMA TRIBU"></span> <span data-template-id="nav-brand" class="canva-text display whitespace-nowrap text-[.85rem] sm:text-base" style="color: rgb(245, 238, 227); font-weight: 900; font-style: normal; font-size: 16px;">LA ULTIMA TRIBU</span> </a>
+    <div class="hidden md:flex items-center gap-7"><a class="nav-link" href="#inicio">Inicio</a><a class="nav-link" href="#banda">La banda</a><a class="nav-link" href="#musica">Música</a><a class="nav-link" href="#galeria">Galería</a><a class="nav-link" href="#contacto">Contacto</a>
     </div><button id="menu-toggle" type="button" class="md:hidden p-3 text-white" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu"><span class="menu-lines" aria-hidden="true"><span></span><span></span><span></span></span></button>
    </nav>
-   <nav id="mobile-menu" class="mobile-menu md:hidden flex-col gap-6 px-7 py-7 border-t border-white/20 bg-[#090809]" aria-label="Navegación móvil">
-    <a class="nav-link" href="#inicio">Inicio</a><a class="nav-link" href="#banda">La banda</a><a class="nav-link" href="#musica">Música</a><a class="nav-link" href="#galeria">Galería</a><a class="nav-link" href="#contacto">Contacto</a>
+   <nav id="mobile-menu" class="mobile-menu md:hidden flex-col gap-6 px-7 py-7 border-t border-white/20 bg-[#090809]" aria-label="Navegación móvil"><a class="nav-link" href="#inicio">Inicio</a><a class="nav-link" href="#banda">La banda</a><a class="nav-link" href="#musica">Música</a><a class="nav-link" href="#galeria">Galería</a><a class="nav-link" href="#contacto">Contacto</a>
    </nav>
   </header>
   <main>
    <section id="inicio" data-template-id="hero-section" class="canva-banner hero" style="background: radial-gradient(rgb(118, 56, 250), rgb(9, 8, 9));">
-    <video id="hero-video" autoplay="" loop="" muted="" playsinline="" preload="metadata" aria-label="Video de portada de La ULTIMA TRIBU"><!-- El archivo debe estar en la raíz del repositorio de GitHub Pages; si cambia el nombre, modifica la variable de fuente. --> <source id="hero-video-source" type="video/mp4">
+    <video id="hero-video" autoplay="" loop="" muted="" playsinline="" preload="metadata" aria-label="Video de portada de La ULTIMA TRIBU">
+     <!-- El archivo debe estar en la raíz del repositorio de GitHub Pages; si cambia el nombre, modifica la variable de fuente. --> <source id="hero-video-source" type="video/mp4">
     </video>
     <div class="hero-atmosphere" aria-hidden="true"></div>
     <div class="shell hero-inner">
@@ -223,8 +250,7 @@ Unidos por una misma fe, llamados con un mismo propósito
 
 Si quieres agendar a La Última Tribu para un concierto, congreso o reunión, déjanos tus datos y coordinemos la fecha.</p>
      </div>
-     <div>
-      <a href="https://www.facebook.com/laultimatribu.lut" target="_blank" rel="noopener noreferrer" class="social-link"><span data-template-id="facebook-link" class="canva-link" style="color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 16px;">Facebook</span><span aria-hidden="true">↗</span></a> <a href="https://www.instagram.com/laultimatribu/" target="_blank" rel="noopener noreferrer" class="social-link"><span data-template-id="instagram-link" class="canva-link" style="color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 16px;">Instagram</span><span aria-hidden="true">↗</span></a> <a href="https://www.tiktok.com/@laultimatribu1" target="_blank" rel="noopener noreferrer" class="social-link"><span data-template-id="tiktok-link" class="canva-link" style="color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 16px;">TikTok</span><span aria-hidden="true">↗</span></a> <a data-template-id="whatsapp-link" href="https://wa.me/584148182793" target="_blank" rel="noopener noreferrer" class="canva-button action action-primary mt-8" style="background: rgb(255, 0, 95); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Escríbenos por WhatsApp</a>
+     <div><a href="https://www.facebook.com/laultimatribu.lut" target="_blank" rel="noopener noreferrer" class="social-link"><span data-template-id="facebook-link" class="canva-link" style="color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 16px;">Facebook</span><span aria-hidden="true">↗</span></a> <a href="https://www.instagram.com/laultimatribu/" target="_blank" rel="noopener noreferrer" class="social-link"><span data-template-id="instagram-link" class="canva-link" style="color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 16px;">Instagram</span><span aria-hidden="true">↗</span></a> <a href="https://www.tiktok.com/@laultimatribu1" target="_blank" rel="noopener noreferrer" class="social-link"><span data-template-id="tiktok-link" class="canva-link" style="color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 16px;">TikTok</span><span aria-hidden="true">↗</span></a> <a data-template-id="whatsapp-link" href="https://wa.me/584148182793" target="_blank" rel="noopener noreferrer" class="canva-button action action-primary mt-8" style="background: rgb(255, 0, 95); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Escríbenos por WhatsApp</a>
       <p data-template-id="whatsapp-number" class="canva-text mt-4 text-sm leading-relaxed text-white/80" style="color: rgb(255, 255, 255); font-weight: 500; font-style: normal; font-size: 16px;">+58 414-8182793</p>
      </div>
     </div>
@@ -233,20 +259,18 @@ Si quieres agendar a La Última Tribu para un concierto, congreso o reunión, d�
   <footer data-template-id="footer-section" class="canva-footer footer" style="background: rgb(9, 8, 9);">
    <div class="shell py-10 flex flex-col md:flex-row md:items-end md:justify-between gap-8">
     <div>
-     <div class="flex items-center gap-3 mb-3">
-      <span class="logo-frame"><img data-template-id="brand-logo" class="canva-image w-9 h-9 object-contain" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('logo-fallback')" src="https://i.imgur.com/FtkZkMA.jpg" alt="Logo de La ULTIMA TRIBU"></span>
+     <div class="flex items-center gap-3 mb-3"><span class="logo-frame"><img data-template-id="brand-logo" class="canva-image w-9 h-9 object-contain" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('logo-fallback')" src="https://i.imgur.com/FtkZkMA.jpg" alt="Logo de La ULTIMA TRIBU"></span>
       <p data-template-id="footer-brand" class="canva-text display text-2xl" style="color: rgb(245, 238, 227); font-weight: 900; font-style: normal; font-size: 16px;">LA ULTIMA TRIBU</p>
      </div>
      <p data-template-id="footer-copyright" class="canva-text text-sm" style="color: rgb(201, 190, 185); font-weight: 400; font-style: normal; font-size: 16px;">© La ULTIMA TRIBU. Todos los derechos reservados. Texto editable.</p>
     </div>
-    <nav class="flex flex-wrap gap-x-5 gap-y-3" aria-label="Navegación del pie de página">
-     <a href="#inicio" class="nav-link">Inicio</a><a href="#banda" class="nav-link">La banda</a><a href="#musica" class="nav-link">Música</a><a href="#galeria" class="nav-link">Galería</a><a href="#contacto" class="nav-link">Contacto</a>
+    <nav class="flex flex-wrap gap-x-5 gap-y-3" aria-label="Navegación del pie de página"><a href="#inicio" class="nav-link">Inicio</a><a href="#banda" class="nav-link">La banda</a><a href="#musica" class="nav-link">Música</a><a href="#galeria" class="nav-link">Galería</a><a href="#contacto" class="nav-link">Contacto</a>
     </nav>
    </div>
   </footer>
-  <div id="lightbox" class="modal" role="dialog" aria-modal="true" aria-label="Fotografía ampliada" aria-hidden="true">
-   <button id="lightbox-close" type="button" class="action absolute right-5 top-5" aria-label="Cerrar fotografía">Cerrar ×</button>
-   <figure class="max-w-5xl text-center"><img id="lightbox-image" alt="">
+  <div id="lightbox" class="modal" role="dialog" aria-modal="true" aria-label="Fotografía ampliada" aria-hidden="true"><button id="lightbox-close" type="button" class="action absolute right-5 top-5" aria-label="Cerrar fotografía">Cerrar ×</button>
+   <figure class="max-w-5xl text-center">
+    <img id="lightbox-image" alt="">
     <figcaption id="lightbox-caption" class="mt-4 text-white"></figcaption>
    </figure>
   </div>
