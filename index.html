@@ -163,25 +163,27 @@
       *,*::before,*::after { animation-duration:.01ms!important; transition-duration:.01ms!important; }
     }
   </style>
-  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js" type="text/javascript"></script>
   <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js" type="text/javascript"></script>
   <script src="/_sdk/570d53629f0b998d.data_sdk.js" type="text/javascript" integrity="sha512-JEN39+V+Nvv9ZZOVS8vNk1iA9ErZJHTdgOw9KzPuMiK7m0I+KPEr/wmTnCFIQVsDjCZgJWfGnFi1IQh2Io2qyA=="></script>
   <script src="/_sdk/3c889ef0464c8f3c.editing_sdk.js" type="text/javascript" integrity="sha512-NXaPkdInwCOHRcD1AlnM1kHXlU9YrcK/X97HuqeduFmMqNEHYKT8h1O1g4ofohcZaE8pxMTkkESWY0NPm6G8AQ=="></script>
   <script src="/_sdk/c30df2f1b43bb1c9.resizing_sdk.js" type="text/javascript" integrity="sha512-D333Ts+f4grQi3QxtsDXggpMWmSBzoaq0HBneFnX5mKOM0DIqoMYROhGiQrAeQEiHtxcjverIEa7k6HIZXqXiA=="></script>
  </head>
  <body data-template-id="__page-root" class="w-full" style="background: rgb(9, 8, 9);">
   <header data-template-id="site-header" class="canva-header site-header" style="background: rgba(9, 8, 9, 0.78);">
-   <nav class="shell h-[76px] flex items-center justify-between gap-5" aria-label="Navegación principal"><a href="#inicio" class="flex items-center gap-3 min-w-0" aria-label="La ULTIMA TRIBU, ir al inicio"> <span class="logo-frame"><img data-template-id="brand-logo" class="canva-image w-9 h-9 object-contain" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('logo-fallback')" src="https://i.imgur.com/FtkZkMA.jpg" alt="Logo de La ULTIMA TRIBU"></span> <span data-template-id="nav-brand" class="canva-text display whitespace-nowrap text-[.85rem] sm:text-base" style="color: rgb(245, 238, 227); font-weight: 900; font-style: normal; font-size: 16px;">LA ULTIMA TRIBU</span> </a>
-    <div class="hidden md:flex items-center gap-7"><a class="nav-link" href="#inicio">Inicio</a><a class="nav-link" href="#banda">La banda</a><a class="nav-link" href="#musica">Música</a><a class="nav-link" href="#galeria">Galería</a><a class="nav-link" href="#contacto">Contacto</a>
+   <nav class="shell h-[76px] flex items-center justify-between gap-5" aria-label="Navegación principal">
+    <a href="#inicio" class="flex items-center gap-3 min-w-0" aria-label="La ULTIMA TRIBU, ir al inicio"> <span class="logo-frame"><img data-template-id="brand-logo" class="canva-image w-9 h-9 object-contain" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('logo-fallback')" src="https://i.imgur.com/FtkZkMA.jpg" alt="Logo de La ULTIMA TRIBU"></span> <span data-template-id="nav-brand" class="canva-text display whitespace-nowrap text-[.85rem] sm:text-base" style="color: rgb(245, 238, 227); font-weight: 900; font-style: normal; font-size: 16px;">LA ULTIMA TRIBU</span> </a>
+    <div class="hidden md:flex items-center gap-7">
+     <a class="nav-link" href="#inicio">Inicio</a><a class="nav-link" href="#banda">La banda</a><a class="nav-link" href="#musica">Música</a><a class="nav-link" href="#galeria">Galería</a><a class="nav-link" href="#contacto">Contacto</a>
     </div><button id="menu-toggle" type="button" class="md:hidden p-3 text-white" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu"><span class="menu-lines" aria-hidden="true"><span></span><span></span><span></span></span></button>
    </nav>
-   <nav id="mobile-menu" class="mobile-menu md:hidden flex-col gap-6 px-7 py-7 border-t border-white/20 bg-[#090809]" aria-label="Navegación móvil"><a class="nav-link" href="#inicio">Inicio</a><a class="nav-link" href="#banda">La banda</a><a class="nav-link" href="#musica">Música</a><a class="nav-link" href="#galeria">Galería</a><a class="nav-link" href="#contacto">Contacto</a>
+   <nav id="mobile-menu" class="mobile-menu md:hidden flex-col gap-6 px-7 py-7 border-t border-white/20 bg-[#090809]" aria-label="Navegación móvil">
+    <a class="nav-link" href="#inicio">Inicio</a><a class="nav-link" href="#banda">La banda</a><a class="nav-link" href="#musica">Música</a><a class="nav-link" href="#galeria">Galería</a><a class="nav-link" href="#contacto">Contacto</a>
    </nav>
   </header>
   <main>
    <section id="inicio" data-template-id="hero-section" class="canva-banner hero" style="background: radial-gradient(rgb(118, 56, 250), rgb(9, 8, 9));">
-    <video id="hero-video" autoplay="" loop="" muted="" playsinline="" preload="metadata" aria-label="Video de portada de La ULTIMA TRIBU">
-     <!-- El archivo debe estar en la raíz del repositorio de GitHub Pages; si cambia el nombre, modifica la variable de fuente. --> <source id="hero-video-source" type="video/mp4">
+    <video id="hero-video" autoplay="" loop="" muted="" playsinline="" preload="metadata" aria-label="Video de portada de La ULTIMA TRIBU"><!-- El archivo debe estar en la raíz del repositorio de GitHub Pages; si cambia el nombre, modifica la variable de fuente. --> <source id="hero-video-source" type="video/mp4">
     </video>
     <div class="hero-atmosphere" aria-hidden="true"></div>
     <div class="shell hero-inner">
@@ -208,8 +210,7 @@ Unidos por una misma fe, llamados con un mismo propósito
     </div>
    </section>
    <section id="experiencia" data-template-id="experience-section" class="canva-section experience-section section-space" style="background: rgb(0, 0, 0);">
-    <div class="experience-media" aria-hidden="true">
-     <img data-template-id="experience-image" class="canva-image experience-image" loading="lazy" decoding="async" onerror="this.style.display='none'; this.parentElement.classList.add('experience-fallback')" src="https://i.imgur.com/MwVkf4Y.jpg" alt="Imagen de La ULTIMA TRIBU en vivo">
+    <div class="experience-media" aria-hidden="true"><img data-template-id="experience-image" class="canva-image experience-image" loading="lazy" decoding="async" onerror="this.style.display='none'; this.parentElement.classList.add('experience-fallback')" src="https://i.imgur.com/MwVkf4Y.jpg" alt="Imagen de La ULTIMA TRIBU en vivo">
     </div>
     <div class="experience-overlay" aria-hidden="true"></div>
     <div class="shell experience-content">
@@ -249,7 +250,7 @@ Unidos por una misma fe, llamados con un mismo propósito
     <div class="shell">
      <p data-template-id="gallery-kicker" class="canva-text eyebrow mb-6" style="color: rgb(255, 214, 0); font-weight: 700; font-style: normal; font-size: 16px;">MOMENTOS PARA COMPARTIR</p>
      <h2 data-template-id="gallery-title" class="canva-text display section-heading" style="color: rgb(245, 238, 227); font-weight: 900; font-style: normal; font-size: 24px;">GALERÍA.</h2>
-     <p data-template-id="gallery-intro" class="canva-text intro mt-7" style="color: rgb(201, 190, 185); font-weight: 400; font-style: normal; font-size: 16px;">Una colección visual lista para recibir fotografías y recuerdos de la banda.</p>
+     <p data-template-id="gallery-intro" class="canva-text intro mt-7" style="color: rgb(201, 190, 185); font-weight: 400; font-style: normal; font-size: 16px;">Colección visual </p>
      <div id="gallery-grid" class="gallery-grid"></div>
      <div id="gallery-empty" class="empty-panel">
       <div class="empty-mark mb-5" aria-hidden="true">
@@ -269,7 +270,8 @@ Unidos por una misma fe, llamados con un mismo propósito
 
 Si quieres agendar a La Última Tribu para un concierto, congreso o reunión, déjanos tus datos y coordinemos la fecha.</p>
      </div>
-     <div><a href="https://www.facebook.com/laultimatribu.lut" target="_blank" rel="noopener noreferrer" class="social-link"><span data-template-id="facebook-link" class="canva-link" style="color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 16px;">Facebook</span><span aria-hidden="true">↗</span></a> <a href="https://www.instagram.com/laultimatribu/" target="_blank" rel="noopener noreferrer" class="social-link"><span data-template-id="instagram-link" class="canva-link" style="color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 16px;">Instagram</span><span aria-hidden="true">↗</span></a> <a href="https://www.tiktok.com/@laultimatribu1" target="_blank" rel="noopener noreferrer" class="social-link"><span data-template-id="tiktok-link" class="canva-link" style="color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 16px;">TikTok</span><span aria-hidden="true">↗</span></a> <a data-template-id="whatsapp-link" href="https://wa.me/584148182793" target="_blank" rel="noopener noreferrer" class="canva-button action action-primary mt-8" style="background: rgb(255, 0, 95); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Escríbenos por WhatsApp</a>
+     <div>
+      <a href="https://www.facebook.com/laultimatribu.lut" target="_blank" rel="noopener noreferrer" class="social-link"><span data-template-id="facebook-link" class="canva-link" style="color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 16px;">Facebook</span><span aria-hidden="true">↗</span></a> <a href="https://www.instagram.com/laultimatribu/" target="_blank" rel="noopener noreferrer" class="social-link"><span data-template-id="instagram-link" class="canva-link" style="color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 16px;">Instagram</span><span aria-hidden="true">↗</span></a> <a href="https://www.tiktok.com/@laultimatribu1" target="_blank" rel="noopener noreferrer" class="social-link"><span data-template-id="tiktok-link" class="canva-link" style="color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 16px;">TikTok</span><span aria-hidden="true">↗</span></a> <a data-template-id="whatsapp-link" href="https://wa.me/584148182793" target="_blank" rel="noopener noreferrer" class="canva-button action action-primary mt-8" style="background: rgb(255, 0, 95); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Escríbenos por WhatsApp</a>
       <p data-template-id="whatsapp-number" class="canva-text mt-4 text-sm leading-relaxed text-white/80" style="color: rgb(255, 255, 255); font-weight: 500; font-style: normal; font-size: 16px;">+58 414-8182793</p>
      </div>
     </div>
@@ -278,18 +280,20 @@ Si quieres agendar a La Última Tribu para un concierto, congreso o reunión, d�
   <footer data-template-id="footer-section" class="canva-footer footer" style="background: rgb(9, 8, 9);">
    <div class="shell py-10 flex flex-col md:flex-row md:items-end md:justify-between gap-8">
     <div>
-     <div class="flex items-center gap-3 mb-3"><span class="logo-frame"><img data-template-id="brand-logo" class="canva-image w-9 h-9 object-contain" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('logo-fallback')" src="https://i.imgur.com/FtkZkMA.jpg" alt="Logo de La ULTIMA TRIBU"></span>
+     <div class="flex items-center gap-3 mb-3">
+      <span class="logo-frame"><img data-template-id="brand-logo" class="canva-image w-9 h-9 object-contain" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('logo-fallback')" src="https://i.imgur.com/FtkZkMA.jpg" alt="Logo de La ULTIMA TRIBU"></span>
       <p data-template-id="footer-brand" class="canva-text display text-2xl" style="color: rgb(245, 238, 227); font-weight: 900; font-style: normal; font-size: 16px;">LA ULTIMA TRIBU</p>
      </div>
-     <p data-template-id="footer-copyright" class="canva-text text-sm" style="color: rgb(201, 190, 185); font-weight: 400; font-style: normal; font-size: 16px;">© La ULTIMA TRIBU. Todos los derechos reservados. Texto editable.</p>
+     <p data-template-id="footer-copyright" class="canva-text text-sm" style="color: rgb(201, 190, 185); font-weight: 400; font-style: normal; font-size: 16px;">© La ULTIMA TRIBU. Todos los derechos reservados. LUT-2026</p>
     </div>
-    <nav class="flex flex-wrap gap-x-5 gap-y-3" aria-label="Navegación del pie de página"><a href="#inicio" class="nav-link">Inicio</a><a href="#banda" class="nav-link">La banda</a><a href="#musica" class="nav-link">Música</a><a href="#galeria" class="nav-link">Galería</a><a href="#contacto" class="nav-link">Contacto</a>
+    <nav class="flex flex-wrap gap-x-5 gap-y-3" aria-label="Navegación del pie de página">
+     <a href="#inicio" class="nav-link">Inicio</a><a href="#banda" class="nav-link">La banda</a><a href="#musica" class="nav-link">Música</a><a href="#galeria" class="nav-link">Galería</a><a href="#contacto" class="nav-link">Contacto</a>
     </nav>
    </div>
   </footer>
-  <div id="lightbox" class="modal" role="dialog" aria-modal="true" aria-label="Fotografía ampliada" aria-hidden="true"><button id="lightbox-close" type="button" class="action absolute right-5 top-5" aria-label="Cerrar fotografía">Cerrar ×</button>
-   <figure class="max-w-5xl text-center">
-    <img id="lightbox-image" alt="">
+  <div id="lightbox" class="modal" role="dialog" aria-modal="true" aria-label="Fotografía ampliada" aria-hidden="true">
+   <button id="lightbox-close" type="button" class="action absolute right-5 top-5" aria-label="Cerrar fotografía">Cerrar ×</button>
+   <figure class="max-w-5xl text-center"><img id="lightbox-image" alt="">
     <figcaption id="lightbox-caption" class="mt-4 text-white"></figcaption>
    </figure>
   </div>
@@ -324,7 +328,7 @@ Si quieres agendar a La Última Tribu para un concierto, congreso o reunión, d�
       { titulo: "Apasionado", url: "https://www.youtube.com/watch?v=BKcx-qZvCgg" },
       { titulo: "De ti me enamoré", url: "https://www.youtube.com/watch?v=gZRoX74Sxs0" },
       { titulo: "Contigo", url: "https://www.youtube.com/watch?v=1TGo2xG2kX8&list=OLAK5uy_ly-cu6-3B6j5b2exkplh92w95ExfGIeAE" },
-      { titulo: "Glorioso día", url: "https://www.youtube.com/watch?v=8dhanYqYFNo" }
+      { titulo: "(Cover) Glorioso día", url: "https://www.youtube.com/watch?v=8dhanYqYFNo" }
     ];
     const galeria = [
       { url: "https://imgur.com/KLx73zt", alt: "Galería de La ULTIMA TRIBU" },
